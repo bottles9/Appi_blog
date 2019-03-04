@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'redcarpet', '~> 3.4'
+gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 group :development, :test do
