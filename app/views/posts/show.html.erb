@@ -1,9 +1,26 @@
-<%= @post.title %>
-<%= @post.content %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+	<header>
+		<p class="date"><%= @post.created_at.strftime(' %A, %b %d ') %></p>
+		<h1><%= @post.title %></h1>
+		<hr>
+	</header>
+	<div id="content">
+		<%= @post.content %>
+</div>
 
-<br>
-<br>
+<hr>
 
-
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure you wanna delete this post?"} %>
+<div id="share_box">
+		<p>SHARE THE DO LIST</p>
+		   <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @$80 Million Project - &amp; url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+		<i class="fab fa-twitter"></i>
+	     </a>
+	     	<a onclick="javascript:window.open('http://facebook.com/share.php?u=<%= @post.title %> by @$80 Million Project - &amp; url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+		    <i class="fab fa-facebook"></i>
+	         </a>
+	     	<a onclick="javascript:window.open('http://instagram.com/share?text=<%= @post.title %> by @$80 Million Project - &amp; url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+		    <i class="fab fa-instagram"></i>
+	         </a>
+</div>
+<hr>
+</div>
