@@ -16,14 +16,12 @@
 				   <% end %>
 			</div>
 
-		    <div class="col-3 homepage_content">
-		    	<h2>Stuff I've Built</h2>
+		    <div class="col-2 homepage_content">
+				<h2>Stuff I've Built</h2>
 				<hr>
-				<h3><a href="#">The Do List</a> </h3>
-				<p class="date">Tuesday Feb 2</p>
-		        <h3><a href="#">The Do List</a></h3>
-		        <p class="date">Tuesday Feb 2</p>
-		        <h3><a href="#">The Do List</a></h3>
-		        <p class="date">Tuesday Feb 2</p>
-	    </div>
-	</div>
+				<% @projects.each do |project| %>
+				<h3><a href="#"><%= link_to project.title, project %></a></h3>
+				   <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+				   <% end %>
+			</div>
+				</div>
