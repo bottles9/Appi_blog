@@ -25,6 +25,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
 gem 'sendgrid-ruby'
+gem 'devise', '~> 4.6', '>= 4.6.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
