@@ -23,6 +23,7 @@ gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'mail_form', '~> 1.7', '>= 1.7.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
