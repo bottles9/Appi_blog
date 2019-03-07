@@ -12,7 +12,13 @@
 	</div>
 </div>
 
-<%= link_to "Edit", edit_project_path(@project), :class => 'btn btn-xs btn-info' %>
-<%= link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Are you Sure?"}, :class => 'btn btn-xs btn-danger' %>
+<% if user_signed_in? %>
+   <div id="admin_links">
+   	<%= link_to "Edit", edit_project_path(@project), :class => 'btn btn-xs btn-info' %>
+   	<%= link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Are you Sure?"}, :class => 'btn btn-xs btn-danger' %>
+   	<% end %>
+
+</div>
+
 <hr>
 </div>
