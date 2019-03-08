@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AppyBlog</title>
+    <title>GeenyLand</title>
 
 
      <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -15,12 +15,15 @@
 
   <body>
   	<header id="main_navigation" class="clearfix">
-		<%= link_to '$80 Million Project', root_path, class: "name" %>
+		<%= link_to 'GeenyLand', root_path, class: "name" %>
 		<nav>
 		<%= link_to "Articles", posts_path %>
 		<%= link_to "Projects", projects_path %>
 		<%= link_to "contacts", new_contact_path %>
     <% if user_signed_in? %>
+       <%= link_to "New Article", new_post_path %>
+       <%= link_to "New Project", new_project_path %>
+        <%= link_to "New User", new_user_session_path %>
        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: "Do you Really want to Sign Out?"} %>
     <% end %>
 	</nav>
@@ -36,12 +39,12 @@
     <%= yield %>
 
      <footer id="main_footer">
-  <p class="copyright">&copy; 2018 $80 Million</p>
+  <p class="copyright">&copy; 2018 Group Geeny Inc</p>
   <nav>
 
-    <a href="http://twitter.com/#" target="_blank"><i class="fab fa-twitter glow"></i></a>
-    <a href="http://facebook.com/#" target="_blank"><i class="fab fa-facebook glow"></i></a>
-    <a href="http://instagram.com/#" target="_blank"><i class="fab fa-instagram glow"></i></a>
+    <a href="http://twitter.com/eugenebenyah_gh" target="_blank"><i class="fab fa-twitter glow"></i></a>
+    <a href="http://facebook.com/eugene.benyah" target="_blank"><i class="fab fa-facebook glow"></i></a>
+    <a href="http://instagram.com/eugenebenyah" target="_blank"><i class="fab fa-instagram glow"></i></a>
   </nav>
 </footer>
   </body>

@@ -39,7 +39,8 @@ body {
 }
 
 .notice, .alert {
-	color: green;
+	color: $light;
+	font-weight: 600;
 	text-align: center;
 	padding: 1em 0;
 	border-bottom: 1px solid #E9E9E9;
